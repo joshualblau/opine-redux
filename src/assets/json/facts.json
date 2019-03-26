@@ -1,0 +1,26 @@
+{
+  "Border Wall": {
+    "facts": [
+      "bw fact1",
+      "bw fact2",
+      "bw fact3"
+    ],
+    "photo": "https://cdn.abcotvs.com/dip/images/1953352_050417-flint-dehoyos-trump-wall-design-vid.jpg?w=630"
+  },
+  "Gun Laws": {
+    "facts": [
+      "gl fact1",
+      "gl fact2",
+      "gl fact3"
+    ],
+    "photo": "https://www.gannett-cdn.com/-mm-/296029d2d14395b5ed3d87915fa23634372b591b/c=0-83-5229-3037/local/-/media/2018/03/19/USATODAY/USATODAY/636570326613373124-EPA-USA-REMINGTON-BANKRUPTCY-97433352.JPG?width=3200&height=1680&fit=crop"
+  },
+  "Higher Education": {
+    "facts": [
+      "he fact1",
+      "he fact2",
+      "he fact3"
+    ],
+    "photo": "https://www.uni-bonn.de/the-university/images/unilebenslider2.jpg"
+  }
+}

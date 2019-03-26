@@ -1,0 +1,21 @@
+<article class="jumbotron">
+  <h1>Read</h1>
+</article>
+
+<!-- Menu for choosing topic -->
+<article id="menu">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary" *ngFor="let topic of facts | keyvalue" (click)="selectTopic(topic.key)">
+      {{topic.key}}
+    </button>
+  </div>
+</article>
+
+<!-- List of facts -->
+<article id="facts">
+  <div *ngIf="currentTopic">
+    <div class="card" *ngFor="let fact of currentTopic.facts">
+      <div class="card-body">{{fact}}</div>
+    </div>
+  </div>
+</article>

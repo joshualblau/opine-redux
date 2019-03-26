@@ -1,0 +1,23 @@
+<article class="jumbotron">
+  <h1>Write</h1>
+</article>
+
+<button *ngIf="!pressed" type="button" class="btn btn-secondary" (click)="press()">compose</button>
+
+
+<!-- replace everything below with democracy.io app -->
+
+
+<form *ngIf="pressed" [formGroup]="letterForm" (ngSubmit)="onSubmit()" id="write">
+
+  <label>
+    Letter:<br>
+    <textarea formControlName="letter" rows="10" cols="40"></textarea>
+    <div *ngIf="submitted && letterForm.controls.letter.errors" class="error">
+      <div *ngIf="letterForm.controls.letter.errors.required">Some text is required</div>
+    </div>
+  </label>
+
+  <br><input type="submit" value="send" />
+
+</form>

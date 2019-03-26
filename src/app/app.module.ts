@@ -1,16 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { AccountComponent } from './account/account.component';
+import { FactsComponent } from './facts/facts.component';
+import { WriteComponent } from './write/write.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    PrivacyComponent,
+    AccountComponent,
+    FactsComponent,
+    WriteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
