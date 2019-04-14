@@ -1,26 +1,23 @@
 const express = require('express');
 const router = express.Router();
 
-// declare axios for making http requests
-const axios = require('axios');
-const API = 'https://jsonplaceholder.typicode.com';
+//Set up mongoose connection
+const mongoose = require('mongoose');
+const mongoDB = 'mongodb+srv://jblau:kento@cluster0-jhthm.mongodb.net/opine-redux?retryWrites=true';
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-/* GET api listing. */
-router.get('/', (req, res) => {
-  res.send('api works');
-});
+// Set up routes for user requests
+const userController = require('../controllers/userController');
 
-// Get all posts
-router.get('/posts', (req, res) => {
-  // Get posts from the mock api
-  // This should ideally be replaced with a service that connects to MongoDB
-  axios.get(`${API}/posts`)
-    .then(posts => {
-      res.status(200).json(posts.data);
-    })
-    .catch(error => {
-      res.status(500).send(error)
-    });
-});
+// POST to log in
+router.post('/login', userController.find_user);
+
+// POST to change user data
+router.post('/update', userController.update_user);
+
+// DELETE to delete user data
+router.delete('/delete', userController.delete_user);
 
 module.exports = router;
